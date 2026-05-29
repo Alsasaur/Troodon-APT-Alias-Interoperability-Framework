@@ -1,3 +1,24 @@
-Creative Commons Attribution 4.0 International (CC BY 4.0)
-…
-Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+# CITATION.cff — make sure it contains this
+
+Create or update `CITATION.cff`:
+
+```yaml
+cff-version: 1.2.0
+title: "Troodon: A Provenance-Aware APT Alias Interoperability Framework"
+message: "If you use this repository, please cite it using the metadata below."
+type: software
+authors:
+  - family-names: Tibbit
+    given-names: Alsa
+repository-code: "https://github.com/Alsasaur/Troodon-APT-Alias-Interoperability-Framework"
+abstract: "A research prototype for provenance-aware Advanced Persistent Threat alias reconciliation across heterogeneous cyber threat intelligence ecosystems."
+keywords:
+  - Advanced Persistent Threats
+  - Cyber Threat Intelligence
+  - Alias Reconciliation
+  - Threat Attribution
+  - Interoperability
+  - Knowledge Graphs
+license: MIT
+date-released: 2026-05-29
+version: "0.1.0"

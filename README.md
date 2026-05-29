@@ -2,7 +2,7 @@
 
 Troodon is a research prototype for provenance-aware Advanced Persistent Threat (APT) alias reconciliation across heterogeneous cyber threat intelligence (CTI) ecosystems.
 
-The framework is designed to support structured interoperability between vendor-specific naming systems, public CTI repositories, and analyst-maintained intelligence registries. It does not impose a universal naming standard and does not attempt to perform definitive attribution. Instead, Troodon provides a vendor-neutral crosswalk layer for representing, revising, and tracing alias relationships while preserving provenance, confidence, and analytical context.
+It does not impose a universal naming standard and does not perform definitive attribution. Instead, it provides a vendor-neutral interoperability layer for representing, revising, and tracing alias relationships while preserving provenance, confidence, and analytical context.
 
 ## Research Purpose
 

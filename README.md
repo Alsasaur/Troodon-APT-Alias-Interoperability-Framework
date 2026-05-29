@@ -1,18 +1,40 @@
 # Troodon: A Provenance-Aware APT Alias Interoperability Framework
 
-A research prototype implementing a provenance-aware interoperability framework for reconciling fragmented Advanced Persistent Threat (APT) aliases across heterogeneous cyber threat intelligence (CTI) ecosystems.
+Troodon is a research prototype for provenance-aware Advanced Persistent Threat (APT) alias reconciliation across heterogeneous cyber threat intelligence (CTI) ecosystems.
 
-The framework supports:
-- stable canonical identifiers,
-- alias reconciliation,
-- provenance-aware mappings,
-- layered threat representation,
-- interoperability with STIX and ATT&CK-aligned workflows.
+The framework is designed to support structured interoperability between vendor-specific naming systems, public CTI repositories, and analyst-maintained intelligence registries. It does not impose a universal naming standard and does not attempt to perform definitive attribution. Instead, Troodon provides a vendor-neutral crosswalk layer for representing, revising, and tracing alias relationships while preserving provenance, confidence, and analytical context.
 
-Developed in support of research on cyber threat intelligence interoperability, attribution ambiguity, and structured APT representation.
+## Research Purpose
 
-## Contents
+APT groups are often referenced under different names by different vendors, public repositories, and members of the cybersecurity community. For example, a single threat actor may be associated with multiple labels across Microsoft, CrowdStrike, Mandiant, MITRE ATT&CK, and other CTI sources.
 
-- **schema/** — JSON Schema definitions for structured APT entity representation
-- **examples/** — sample APT entries and alias mappings compatible with the framework
-- **CITATION.cff** — citation metadata for academic referencing
+Troodon addresses this interoperability problem by modelling alias relationships as structured, evidence-backed, and revisable assertions rather than flat synonym lists.
+
+## Key Features
+
+- Stable canonical identifiers for cross-system referencing
+- Typed alias relationships
+- Provenance-aware mapping records
+- Confidence annotations
+- Separation between threat actors, intrusion sets, campaigns, and activity clusters
+- Compatibility with STIX and ATT&CK-aligned CTI workflows
+- Example JSON records for APT alias reconciliation
+- Research prototype suitable for future extension and evaluation
+
+## Relationship Types
+
+Troodon currently supports three primary alias relationship categories:
+
+| Relationship Type | Meaning |
+|---|---|
+| `exact-equivalence` | Two aliases are treated as referring to the same operational entity with high confidence. |
+| `partial-overlap` | Two entities share operational, behavioural, or infrastructure characteristics but may not fully correspond. |
+| `suspected-association` | A relationship has been reported or inferred but remains uncertain or weakly evidenced. |
+
+## Repository Structure
+
+```text
+schema/      JSON Schema definition for Troodon records
+examples/    Example APT alias mapping records
+docs/        Framework architecture, governance, and STIX compatibility notes
+scripts/     Optional validation scripts

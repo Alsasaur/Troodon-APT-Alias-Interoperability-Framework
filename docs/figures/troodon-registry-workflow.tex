@@ -1,3 +1,117 @@
-git add docs/figures/troodon-registry-workflow.tex docs/figures/troodon-registry-workflow.pdf docs/figures/troodon-registry-workflow.png README.md
-git commit -m "Add Troodon registry workflow figure"
-git push
+% Troodon Registry Workflow Figure
+% Required packages in your main LaTeX paper:
+% \usepackage{tikz}
+% \usetikzlibrary{arrows.meta, positioning}
+
+\begin{figure}[t]
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tikzpicture}[
+    font=\scriptsize,
+    >=Latex,
+    arrow/.style={->, thick},
+    doublearrow/.style={<->, thick},
+    inputbox/.style={
+        draw,
+        rounded corners=2pt,
+        thick,
+        fill=blue!7,
+        minimum width=2.75cm,
+        minimum height=0.42cm,
+        align=center,
+        inner sep=2pt
+    },
+    inputcontainer/.style={
+        draw,
+        rounded corners=4pt,
+        thick,
+        fill=blue!3,
+        minimum width=3.15cm,
+        minimum height=3.55cm,
+        align=center
+    },
+    registry/.style={
+        draw,
+        rounded corners=4pt,
+        thick,
+        fill=green!25,
+        minimum width=1.75cm,
+        minimum height=0.75cm,
+        align=center,
+        font=\scriptsize\bfseries,
+        inner sep=2pt
+    },
+    output/.style={
+        draw,
+        rounded corners=4pt,
+        thick,
+        fill=pink!20,
+        minimum width=2.95cm,
+        minimum height=1.35cm,
+        align=left,
+        inner sep=3pt
+    },
+    record/.style={
+        draw,
+        rounded corners=4pt,
+        thick,
+        fill=green!8,
+        minimum width=3.95cm,
+        minimum height=1.55cm,
+        align=left,
+        inner sep=3pt
+    }
+]
+
+% Input block
+\node[inputcontainer] (inputs) at (0,0) {};
+
+\node[font=\scriptsize\bfseries] at (0,1.50)
+{Heterogeneous input sources};
+
+\node[inputbox] at (0,0.95)
+{Vendor: APT28};
+
+\node[inputbox] at (0,0.35)
+{Vendor: Fancy Bear};
+
+\node[inputbox] at (0,-0.25)
+{Vendor: STRONTIUM};
+
+\node[inputbox] at (0,-0.85)
+{Community: Sofacy};
+
+\node[align=center] at (0,-1.35)
+{\large $\vdots$\\[-1mm]
+\textit{Additional sources}};
+
+% Troodon Registry
+\node[registry] (troodon) at (3.75,0)
+{Troodon\\Registry};
+
+% Output
+\node[output] (output) at (6.75,0)
+{\textbf{Unified CTI output}\\[0.5mm]
+ID: RU-APT-2004-SOF\\
+Name: Fancy Bear\\
+Aliases preserved\\
+Provenance retained};
+
+% Canonical record
+\node[record] (record) at (3.75,-1.65)
+{\textbf{Canonical record}\\[0.5mm]
+\textbf{id:} RU-APT-2004-SOF\\
+\textbf{name:} Fancy Bear\\
+\textbf{first\_seen:} 2004-07-01\\
+\textbf{aliases:} APT28, Sofacy, STRONTIUM};
+
+% Arrows
+\draw[arrow] (inputs.east) -- (troodon.west);
+\draw[arrow] (troodon.east) -- (output.west);
+\draw[doublearrow] (troodon.south) -- (record.north);
+
+\end{tikzpicture}
+}
+\caption{Troodon registry workflow for reconciling heterogeneous APT aliases into a canonical CTI record.}
+\label{fig:troodon-registry}
+\end{figure}

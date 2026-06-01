@@ -38,3 +38,11 @@ schema/      JSON Schema definition for Troodon records
 examples/    Example APT alias mapping records
 docs/        Framework architecture, governance, and STIX compatibility notes
 scripts/     Optional validation scripts
+
+## Troodon Registry Workflow
+
+The Troodon Registry reconciles heterogeneous APT aliases from vendor, public, and community CTI sources into a canonical CTI record while preserving aliases, provenance, and interoperability.
+
+The LaTeX/TikZ source for the workflow figure is available at:
+
+`docs/figures/troodon-registry-workflow.tex`

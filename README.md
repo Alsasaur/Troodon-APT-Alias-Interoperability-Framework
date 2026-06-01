@@ -22,7 +22,6 @@ Troodon addresses this interoperability problem by modelling alias relationships
 - Research prototype suitable for future extension and evaluation
 
 ## Relationship Types
-
 Troodon currently supports three primary alias relationship categories:
 
 | Relationship Type | Meaning |
@@ -38,3 +37,4 @@ schema/      JSON Schema definition for Troodon records
 examples/    Example APT alias mapping records
 docs/        Framework architecture, governance, and STIX compatibility notes
 scripts/     Optional validation scripts
+

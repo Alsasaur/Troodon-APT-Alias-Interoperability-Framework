@@ -1,4 +1,3 @@
-:::writing{variant="document" id="47291"}
 # Troodon: A Provenance-Aware APT Alias Interoperability Framework
 
 Troodon is a research prototype for provenance-aware Advanced Persistent Threat (APT) alias reconciliation across heterogeneous cyber threat intelligence (CTI) ecosystems.

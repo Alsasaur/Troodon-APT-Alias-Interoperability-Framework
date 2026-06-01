@@ -20,8 +20,8 @@ Troodon addresses this interoperability problem by modelling alias relationships
 - Compatibility with STIX and ATT&CK-aligned CTI workflows
 - Example JSON records for APT alias reconciliation
 - Research prototype suitable for future extension and evaluation
-
 ## Relationship Types
+
 Troodon currently supports three primary alias relationship categories:
 
 | Relationship Type | Meaning |
@@ -30,11 +30,4 @@ Troodon currently supports three primary alias relationship categories:
 | `partial-overlap` | Two entities share operational, behavioural, or infrastructure characteristics but may not fully correspond. |
 | `suspected-association` | A relationship has been reported or inferred but remains uncertain or weakly evidenced. |
 
-## Repository Structure
-
-```text
-schema/      JSON Schema definition for Troodon records
-examples/    Example APT alias mapping records
-docs/        Framework architecture, governance, and STIX compatibility notes
-scripts/     Optional validation scripts
 

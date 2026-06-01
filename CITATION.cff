@@ -1,10 +1,10 @@
 cff-version: 1.2.0
-message: "If you use this APT Naming System Framwork, please cite it as below."
-title: "APT Naming System"
+message: "If you use this APT alias interoperability framework, please cite it as below."
+title: "Troodon: A Provenance-Aware APT Alias Interoperability Framework"
 authors:
-  - family-names: Tibbit
-    given-names: Alsa
-date-released: 2025-04-25
-version: 1.0
-doi: "10.1234/troodon.aptframework.v1"  # replace with real DOI after Zenodo deposit
-url: "https://github.com/Alsasaur/Troodon-APT-Naming-System-Framework"
+
+* family-names: "Tibbit"
+  given-names: "Alsa"
+  date-released: 2026-06-01
+  version: "1.0"
+  url: "https://github.com/Alsasaur/Troodon-APT-Alias-Interoperability-Framework"
